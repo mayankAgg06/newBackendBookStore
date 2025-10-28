@@ -27,6 +27,8 @@ export const addBook = async(req,res)=>{
     try{
         const {title,author,publishedDate,genre} = req.body;
 
+        
+
         const newBook = new Book({title,author,genre,publishedDate});
 
         await newBook.save();
