@@ -3,6 +3,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import bookRoutes from './routes/bookRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 dotenv.config();
 
 const app = express();
@@ -10,6 +11,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/book',bookRoutes);
+app.use('/auth',authRoutes);
 
 app.get('/',(req,res)=>{
     res.send('this is my backend of bookstore');
