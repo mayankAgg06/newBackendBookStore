@@ -31,15 +31,15 @@ import {
 
 const router = express.Router();
 
-router.post('/add',auth, addBook);
+router.post('/add', addBook);
 
-router.get('/allBooks',auth, getAllBooks);
+router.get('/allBooks', getAllBooks);
 
-router.get('/:id',auth, getBookByID);
+router.get('/:id', getBookByID);
   
-router.put('/edit/:id',auth, updateBookByID);
+router.put('/edit/:id', updateBookByID);
 
-router.delete('/:id',auth, deleteBook); 
+router.delete('/:id', deleteBook); 
 
 router.post('/login',(req,res)=>{
     const {id,password}=req.body;
